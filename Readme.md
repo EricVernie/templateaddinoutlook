@@ -1,9 +1,10 @@
 #Addin-outlook template
-#Step 2 load the addin with a context using Regular expression
+#Step 2 load the addin using Regular expression in the manifest
 
-* In order to run nodejs you need to create certificat using openssl
-openssl genrsa -out localhost-key.pem 1024 
-openssl req -new -key localhost-key.pem -out localhost.csr
+
+## In order to run nodejs you need to create certificat using openssl
+* openssl genrsa -out localhost-key.pem 1024 
+* openssl req -new -key localhost-key.pem -out localhost.csr
   Country Name (2 letter code) [AU]:US
   State or Province Name (full name) [Some-State]:Washington
   Locality Name (eg, city) []:Redmond
@@ -16,5 +17,19 @@ openssl req -new -key localhost-key.pem -out localhost.csr
   to be sent with your certificate request
   A challenge password []:
   An optional company name []:
-openssl x509 -req -in localhost.csr -signkey localhost-key.pem -out localhost-cert.pem
-and install the certificat in the trust root certification authority
+* openssl x509 -req -in localhost.csr -signkey localhost-key.pem -out localhost-cert.pem
+* Then install the certificat in the trust root certification authority
+
+Sample in the manifest
+  <Rule xsi:type="ItemHasRegularExpressionMatch" 
+        RegExName="addressMatches" 
+        RegExValue="@microsoft" 
+        PropertyName="SenderSMTPAddress"
+        IgnoreCase="true"
+      />
+       <Rule xsi:type="ItemHasRegularExpressionMatch" 
+        RegExName="subjectMatches" 
+        RegExValue="[mM][iI][cC][rR][oO][sS][oO][fF][tT]" 
+        PropertyName="Subject"/>
+      </Rule>
+      
