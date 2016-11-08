@@ -1,5 +1,5 @@
 #Addin-outlook template
-#Step 2 load the addin using Regular expression in the manifest
+#Step 3 Initialize office.js
 
 
 ## In order to run nodejs you need to create certificat using openssl
@@ -24,20 +24,3 @@
   
 * openssl x509 -req -in localhost.csr -signkey localhost-key.pem -out localhost-cert.pem
 * Then install the certificat in the trust root certification authority
-
-
-
-### In the manifest place the following rules
-<pre><code>
-Rule xsi:type="ItemHasRegularExpressionMatch"      
-     RegExName="addressMatches" 
-     RegExValue="@microsoft" 
-     PropertyName="SenderSMTPAddress" 
-     IgnoreCase="true"/>
-
-Rule xsi:type="ItemHasRegularExpressionMatch" 
-     RegExName="subjectMatches" 
-     RegExValue="[mM][iI][cC][rR][oO][sS][oO][fF][tT]" 
-     PropertyName="Subject"/>
-</code><pre>
-
