@@ -1,5 +1,5 @@
 #Addin-outlook template
-
+#Step 2
 * In order to run nodejs you need to create certificat using openssl
 openssl genrsa -out localhost-key.pem 1024 
 openssl req -new -key localhost-key.pem -out localhost.csr
