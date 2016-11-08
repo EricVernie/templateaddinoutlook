@@ -1,0 +1,23 @@
+{
+  "name": "templateaddin",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EricVernie/templateaddinoutlook.git"
+  },
+  "author": "Eric Vernié",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EricVernie/templateaddinoutlook/issues"
+  },
+  "homepage": "https://github.com/EricVernie/templateaddinoutlook",
+  "dependencies": {
+    "bower": "^1.8.0",
+    "express": "^4.14.0"
+  }
+}
