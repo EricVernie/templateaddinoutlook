@@ -21,7 +21,7 @@
 * Then install the certificat in the trust root certification authority
 
 Sample in the manifest
-  <Rule xsi:type="ItemHasRegularExpressionMatch" 
+  '<Rule xsi:type="ItemHasRegularExpressionMatch" 
         RegExName="addressMatches" 
         RegExValue="@microsoft" 
         PropertyName="SenderSMTPAddress"
@@ -31,5 +31,5 @@ Sample in the manifest
         RegExName="subjectMatches" 
         RegExValue="[mM][iI][cC][rR][oO][sS][oO][fF][tT]" 
         PropertyName="Subject"/>
-      </Rule>
-      
+      </Rule>'
+
