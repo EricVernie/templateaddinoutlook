@@ -1,29 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--Created:cbbc9d22-5cf7-4e4c-8ee9-42a772aae58a-->
-<OfficeApp xsi:type="MailApp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/office/appforoffice/1.0">
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"    
+          xsi:type="MailApp">
+
   <Id>90ccd117-0985-49a1-9e14-0e8dbe0ea7c1</Id>
   <Version>1.0.0.0</Version>
-  <ProviderName>[Provider name]</ProviderName>
+  <ProviderName>EricV</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="DemoDigipost" />
-  <Description DefaultValue="Demo description" />
+  <DisplayName DefaultValue="Template Addin" />
+  <Description DefaultValue="Template" />
   <IconUrl DefaultValue="https://localhost:8443/content/outlook.png"/>
-  <Capabilities>
-    <Capability Name="Mailbox" />
-  </Capabilities>
-  <DesktopSettings>
-    <SourceLocation DefaultValue="https://localhost:8443/AppRead/Home/Home.html" />
-    <RequestedHeight>250</RequestedHeight>
-  </DesktopSettings>
-  <TabletSettings>
-    <SourceLocation DefaultValue="https://localhost:8443/AppRead/Home/Home.html" />
-    <RequestedHeight>250</RequestedHeight>
-  </TabletSettings>
-  <PhoneSettings>
-    <SourceLocation DefaultValue="https://localhost:8443/AppRead/Home/Home.html" />
-  </PhoneSettings>
-  <Permissions>ReadItem</Permissions>
-  <Rule xsi:type="RuleCollection" Mode="And">    
-    <Rule xsi:type="ItemIs" ItemType="Message" />    
+   <Hosts>
+    <Host Name="Mailbox" />
+  </Hosts>
+  <Requirements>
+    <Sets>
+      <Set Name="MailBox" MinVersion="1.1" />
+    </Sets>
+  </Requirements>
+  <FormSettings>
+    <Form xsi:type="ItemRead">    
+      <DesktopSettings>
+        <SourceLocation DefaultValue="https://localhost:8443/read/read.html" />
+        <RequestedHeight>250</RequestedHeight>
+      </DesktopSettings>
+      <!--<TabletSettings>
+        <SourceLocation DefaultValue="https://localhost:8443/read/read.html" />
+        <RequestedHeight>250</RequestedHeight>
+      </TabletSettings>
+      <PhoneSettings>
+        <SourceLocation DefaultValue="https://localhost:8443/read/read.html" />
+      </PhoneSettings>-->
+    </Form>
+    <Form xsi:type="ItemEdit">    
+      <DesktopSettings>
+        <SourceLocation DefaultValue="https://localhost:8443/compose/compose.html" />
+        <!--<RequestedHeight>250</RequestedHeight>-->
+      </DesktopSettings>      
+    </Form>
+  </FormSettings>
+    
+  <Permissions>ReadWriteItem</Permissions>
+  <Rule xsi:type="RuleCollection" Mode="Or">    
+    <Rule xsi:type="ItemIs" ItemType="Message" FormType="Edit" />    
+    <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read" />
   </Rule>
 </OfficeApp>
