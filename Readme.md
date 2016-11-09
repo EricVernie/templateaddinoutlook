@@ -1,5 +1,6 @@
 #Addin-outlook template
-#Step 2 load the addin using Regular expression in the manifest
+
+#Step 2 Context loading add-in using Regular expression in the manifest
 
 
 ## In order to run nodejs you need to create certificat using openssl
