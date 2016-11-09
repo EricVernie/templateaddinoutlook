@@ -2,10 +2,20 @@
     'use script';
     Office.initialize = function(reason) {
         $(document).ready(function () {
-                $('#set-subject').click(setSubject);
+                $('#set-subject').click(setBodyAndSubject);
         });
     };
-    function setSubject() {
-		Office.cast.item.toItemCompose(Office.context.mailbox.item).subject.setAsync("Hello world!");
+    function setBodyAndSubject() {
+        debugger
+        var item=Office.cast.item.toItemCompose(Office.context.mailbox.item);
+        item.subject.setAsync("New mail")
+        var userProfile=Office.context.mailbox.userProfile;        
+        var body = item.body;
+        var userProfileToDisplay = "<p>" + userProfile.displayName + "</p>" + 
+                                   "<p>" + userProfile.emailAddress + "</p>" +
+                                   "<p>" + userProfile.timeZone;
+        
+        body.prependAsync("<b>Hello</b><p></p>" + userProfileToDisplay, {coercionType:Office.CoercionType.Html});
+         
 	}
 })();

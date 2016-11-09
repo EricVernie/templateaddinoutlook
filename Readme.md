@@ -1,7 +1,8 @@
 #Addin-outlook template
 
-#Step 3 Initialize and using office.js and the API
+#Step 4 Using Office UI Fabric
 
+For the Office UI Fabric, go to http://aka.ms/office-ui-fabric to learn more
 
 ## In order to run nodejs you need to create a certificat using openssl
 * openssl genrsa -out localhost-key.pem 1024 
