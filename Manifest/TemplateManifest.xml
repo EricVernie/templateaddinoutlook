@@ -8,7 +8,7 @@
   <Version>0.0.0.2</Version>
   <ProviderName>EricV</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="Template Addin Step4" />
+  <DisplayName DefaultValue="Template Addin Step3" />
   <Description DefaultValue="Template" />
   <IconUrl DefaultValue="https://localhost:8443/content/outlook.png"/>
    <Hosts>
