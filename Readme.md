@@ -1,5 +1,5 @@
 #Addin-outlook template
-#Step1 simple addin with simple manifest
+#Step1 Add-in skeleton with simple manifest
 * In order to run nodejs you need to create certificat using openssl
 openssl genrsa -out localhost-key.pem 1024 
 openssl req -new -key localhost-key.pem -out localhost.csr
