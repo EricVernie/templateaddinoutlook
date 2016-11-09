@@ -2,12 +2,10 @@
     'use script';
     Office.initialize = function(reason) {
         $(document).ready(function () {
-                putItemDetails();
+                $('#set-subject').click(setSubject);
         });
     };
-     function putItemDetails() {
-        var item = Office.cast.item.toItemCompose(Office.context.mailbox.item);
-        item.subject="Demo addin";
-     }
-     
+    function setSubject() {
+		Office.cast.item.toItemCompose(Office.context.mailbox.item).subject.setAsync("Hello world!");
+	}
 })();

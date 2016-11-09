@@ -2,7 +2,7 @@
 #Step 3 Initialize office.js
 
 
-## In order to run nodejs you need to create certificat using openssl
+## In order to run nodejs you need to create a certificat using openssl
 * openssl genrsa -out localhost-key.pem 1024 
 * openssl req -new -key localhost-key.pem -out localhost.csr
 
