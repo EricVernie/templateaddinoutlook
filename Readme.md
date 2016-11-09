@@ -1,6 +1,6 @@
 #Addin-outlook template
 
-#Step 4 Using Office UI Fabric
+#Step 3 Initialize and using office.js API
 
 For the Office UI Fabric, go to http://aka.ms/office-ui-fabric to learn more
 
