@@ -1,5 +1,6 @@
 #Addin-outlook template
-#Step 3 Initialize office.js
+
+#Step 3 Initialize and using office.js and the API
 
 
 ## In order to run nodejs you need to create a certificat using openssl
