@@ -37,7 +37,10 @@
       <DesktopSettings>
         <SourceLocation DefaultValue="https://localhost:8443/compose/compose.html" />
         <!--<RequestedHeight>250</RequestedHeight>-->
-      </DesktopSettings>      
+      </DesktopSettings> 
+        <!--<PhoneSettings>
+          <SourceLocation DefaultValue="https://localhost:8443/compose/compose.html" />
+      </PhoneSettings>-->     -->
     </Form>
   </FormSettings>
     
