@@ -1,6 +1,6 @@
 #Addin-outlook template
 
-#Step 4 Using Office UI Fabric
+#Step 5 Using ADAL & Microsoft Graph
 
 
 ## In order to run nodejs you need to create a certificat using openssl
