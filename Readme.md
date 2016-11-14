@@ -2,8 +2,6 @@
 
 #Step 3 Initialize and using office.js API
 
-For the Office UI Fabric, go to http://aka.ms/office-ui-fabric to learn more
-
 ## In order to run nodejs you need to create a certificat using openssl
 * openssl genrsa -out localhost-key.pem 1024 
 * openssl req -new -key localhost-key.pem -out localhost.csr
