@@ -7,7 +7,7 @@
     };
     function setBodyAndSubject() {
         debugger
-        var item=Office.cast.item.toItemCompose(Office.context.mailbox.item);
+        var item=Office.context.mailbox.item;
         item.subject.setAsync("New mail")
         var userProfile=Office.context.mailbox.userProfile;        
         var body = item.body;

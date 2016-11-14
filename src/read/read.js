@@ -6,9 +6,8 @@
         });
     };
      function displayItemDetails() {
-         
-        var item = Office.cast.item.toItemRead(Office.context.mailbox.item);
+        debugger
+        var item=Office.context.mailbox.item;        
         $('#subject').text(item.subject);
-     }
-     
+     }     
 })();
