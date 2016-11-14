@@ -18,6 +18,7 @@
   "homepage": "https://github.com/EricVernie/templateaddinoutlook",
   "dependencies": {
     "bower": "^1.8.0",
+    "cors": "^2.8.1",
     "express": "^4.14.0"
   }
 }
