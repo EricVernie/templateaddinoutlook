@@ -1,9 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!--Created:cbbc9d22-5cf7-4e4c-8ee9-42a772aae58a-->
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"    
           xsi:type="MailApp">
-
   <Id>90ccd117-0985-49a1-9e14-0e8dbe0ea7c1</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>EricV</ProviderName>
@@ -28,22 +26,20 @@
       <!--<TabletSettings>
         <SourceLocation DefaultValue="https://localhost:8443/read/read.html" />
         <RequestedHeight>250</RequestedHeight>
-      </TabletSettings>
+      </TabletSettings>-->
       <PhoneSettings>
         <SourceLocation DefaultValue="https://localhost:8443/read/read.html" />
-      </PhoneSettings>-->
+      </PhoneSettings>
     </Form>
     <Form xsi:type="ItemEdit">    
       <DesktopSettings>
         <SourceLocation DefaultValue="https://localhost:8443/compose/compose.html" />
-        <!--<RequestedHeight>250</RequestedHeight>-->
-      </DesktopSettings> 
-        <!--<PhoneSettings>
-          <SourceLocation DefaultValue="https://localhost:8443/compose/compose.html" />
-      </PhoneSettings>-->     -->
+      </DesktopSettings>     
+      <PhoneSettings>
+        <SourceLocation DefaultValue="https://localhost:8443/compose/compose.html"/>
+      </PhoneSettings>       
     </Form>
   </FormSettings>
-    
   <Permissions>ReadWriteItem</Permissions>
   <Rule xsi:type="RuleCollection" Mode="Or">    
     <Rule xsi:type="ItemIs" ItemType="Message" FormType="Edit" />    
