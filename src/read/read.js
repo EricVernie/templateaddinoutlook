@@ -12,7 +12,7 @@
      }
      
      function openDialog() {
-         var url = 'https://localhost:8443/dialog/popup.html';
+         var url = 'https://localhost:8443/dialog/dialog.html';
          
           var dialogOptions = { width: 25, height: 25, displayInIframe: false};
   
