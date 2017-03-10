@@ -7,7 +7,7 @@
         });
     };
     function setBodyAndSubject() {
-        //debugger
+        debugger
         var item=Office.cast.item.toItemCompose(Office.context.mailbox.item);
         item.subject.setAsync("New mail")
         var userProfile=Office.context.mailbox.userProfile;        
