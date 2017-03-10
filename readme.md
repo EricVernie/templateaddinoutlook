@@ -3,3 +3,4 @@
 #Branch Step3 Initialize office.js API
 #Branch Step4 Using Office UI Fabric
 #Branch Step5 Calling Web API
+#Branch Step6 Command
