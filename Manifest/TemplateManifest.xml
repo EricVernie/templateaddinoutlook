@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--Created:cbbc9d22-5cf7-4e4c-8ee9-42a772aae58a-->
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"    
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+          xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+          xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides"
           xsi:type="MailApp">
 
   <Id>90ccd117-0985-49a1-9e14-0e8dbe0ea7c1</Id>
@@ -10,7 +12,7 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Template Addin" />
   <Description DefaultValue="Template" />
-  <IconUrl DefaultValue="https://localhost:8443/content/outlook.png"/>
+  <IconUrl DefaultValue="https://localhost:8443/assets/outlook.png"/>
   <AppDomains>
   <AppDomain>https://localhost:44353/</AppDomain>
   </AppDomains>
@@ -65,22 +67,34 @@
       <Rule xsi:type="ItemIs" ItemType="Message" FormType="Edit" /> 
     </Rule> 
   </Rule>
-<!--<VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
+<VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
    <Requirements>
       <bt:Sets DefaultMinVersion="1.3">
         <bt:Set Name="Mailbox" />
       </bt:Sets>
     </Requirements>
     <Hosts>
-      <Host  xsi:type="MailHost">
+      <Host xsi:type="MailHost">
         <DesktopFormFactor>
-          <FunctionFile resid="ptrFunctions">
+          <FunctionFile resid="ptrFunctions"/>
           <ExtensionPoint xsi:type="MessageReadCommandSurface">
             <OfficeTab id="TabDefault">
-              <Group id=msgReadGroup>
-                <Label resid="ptrGroupLabel">
+              <Group id="msgReadGroup">
+                <Label resid="ptrGroupLabel"/>
                 <Control xsi:type="Button" id="cmdReadFunctionButton">
-                  <Label resid="ptrCmdReadFunctionButton">
+                  <Label resid="ptrCmdReadFunctionButton"/>                  
+                   <Supertip>
+                    <Title resid="ptrMenuReadSuperTipTitle" />
+                    <Description resid="ptrMenuReadSuperTipDescription" />
+                  </Supertip>
+                   <Icon>
+                    <bt:Image size="16" resid="ptrblue-icon-16" />
+                    <bt:Image size="32" resid="ptrblue-icon-32" />
+                    <bt:Image size="80" resid="ptrblue-icon-80" />
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>getSubject</FunctionName>
+                  </Action>
                 </Control>
               </Group>
             </OfficeTab>
@@ -89,13 +103,21 @@
       </Host>
     </Hosts>
 <Resources>
+<bt:Images>
+    <bt:Image id="ptrblue-icon-16" DefaultValue="https://localhost:8443/assets/images/blue-16.png"/>
+    <bt:Image id="ptrblue-icon-32" DefaultValue="https://localhost:8443/assets/images/blue-32.png"/>
+    <bt:Image id="ptrblue-icon-80" DefaultValue="https://localhost:8443/assets/images/blue-80.png"/>
+</bt:Images>
 <bt:Urls>
- <bt:Url id="ptrFunctions" DefaultValue="https://localhost:8443/functions/Functions.html">
+ <bt:Url id="ptrFunctions" DefaultValue="https://localhost:8443/functions/functions.html"/>
 </bt:Urls>
-  <bt:ShortStrings>
+<bt:ShortStrings>
         <bt:String id="ptrGroupLabel" DefaultValue="Add-in Template"/>
-        <bt:ShortStrings id="ptrCmdReadFunctionButton" DefaultValue="Toto fait du bateau">
-  </bt:ShortStrings>
-</VersionOverrides>-->
+        <bt:String id="ptrCmdReadFunctionButton" DefaultValue="Mon Bouton"/>
+        <bt:String id="ptrMenuReadSuperTipTitle" DefaultValue="SuperTip Choisir quelque chose"/>
+        <bt:String id="ptrMenuReadSuperTipDescription" DefaultValue="SuperTip description"/>
+</bt:ShortStrings>
+</Resources>
+</VersionOverrides>
 
 </OfficeApp>
