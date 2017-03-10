@@ -1,22 +1,17 @@
 {
-  "name": "templateaddin",
-  "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node server.js"
+  "name": "command-demo",
+  "version": "0.1.0",
+  "scripts": {},
+  "devDependencies": {
+    "chalk": "^1.1.1",
+    "gulp": "^3.9.0",
+    "gulp-webserver": "^0.9.1",
+    "minimist": "^1.2.0",
+    "xmllint": "git+https://github.com/kripken/xml.js.git"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/EricVernie/templateaddinoutlook.git"
-  },
-  "author": "Eric Vernié",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/EricVernie/templateaddinoutlook/issues"
-  },
-  "homepage": "https://github.com/EricVernie/templateaddinoutlook",
   "dependencies": {
+    "framework7": "^1.5.2",
+    "urijs": "^1.18.5",
     "bower": "^1.8.0",
     "cors": "^2.8.1",
     "express": "^4.14.0"

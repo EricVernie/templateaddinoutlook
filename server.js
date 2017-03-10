@@ -9,7 +9,7 @@ var https_options = {
   cert: fs.readFileSync('./localhost-cert.pem')
 };
 
-var PORT = 8443,
+var PORT = 8444,
     HOST = 'localhost';
 
 var app = express();
