@@ -1,6 +1,6 @@
 #Addin-outlook template
 
-#Step 5 Calling Web API
+#Step 6 Using command
 
 
 ## In order to run nodejs you need to create a certificat using openssl
