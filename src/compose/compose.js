@@ -7,7 +7,7 @@
         });
     };
     function setBodyAndSubject() {
-        debugger
+        //debugger
         var item=Office.cast.item.toItemCompose(Office.context.mailbox.item);
         item.subject.setAsync("New mail")
         var userProfile=Office.context.mailbox.userProfile;        
@@ -27,7 +27,7 @@
             url:"https://localhost:44353/api/values",           
 
         }).done(function(response){
-            debugger
+          debugger
             var items=response;
              $('#value1').text(items[0]);
              $('#value2').text(items[1]);
