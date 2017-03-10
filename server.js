@@ -15,7 +15,7 @@ var PORT = 8443,
 var app = express();
 
 // set static routes
-app.use(cors({origin: 'https://localhost:44353/api/values'}))
+app.use(cors({origin: 'https://localhost:44353'}))
 // app.use(function (req, res, next) {
 
 //     // Website you wish to allow to connect
