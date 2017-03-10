@@ -51,12 +51,16 @@
           RegExName="addressMatches" 
           RegExValue="@microsoft" 
           PropertyName="SenderSMTPAddress"
-          IgnoreCase="true">
+          IgnoreCase="true"/> -->
         <Rule xsi:type="ItemHasRegularExpressionMatch" 
           RegExName="subjectMatches" 
           RegExValue="[mM][iI][cC][rR][oO][sS][oO][fF][tT]" 
-          PropertyName="Subject"/>-->
-      </Rule>
+          PropertyName="Subject"/>  
+      <!--<Rule xsi:type="ItemHasRegularExpressionMatch" 
+          RegExName="bodyMatch" 
+          RegExValue="[mM][iI][cC][rR][oO][sS][oO][fF][tT]" 
+          PropertyName="BodyAsPlaintext"/>-->
+    </Rule>
     <Rule xsi:type="RuleCollection" Mode="Or">
       <Rule xsi:type="ItemIs" ItemType="Appointment" FormType="Edit" />
       <Rule xsi:type="ItemIs" ItemType="Message" FormType="Edit" /> 
